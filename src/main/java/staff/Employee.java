@@ -26,9 +26,17 @@ public abstract class Employee {
         return this.salary;
     }
 
+    // Setters
+    public void setName(String newName) {
+        this.name = newName;
+    }
+
     // Methods
     public double raiseSalary(double moneyIncrement) {
-        return this.salary += moneyIncrement;
+        if (this.salary + moneyIncrement >= 0) {
+            this.salary += moneyIncrement;
+        } else this.salary = 0;
+        return this.salary;
     }
 
     public double payBonus() {

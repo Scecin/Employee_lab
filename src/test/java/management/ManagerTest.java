@@ -1,3 +1,5 @@
+package management;
+
 import management.Manager;
 import org.junit.Before;
 import org.junit.Test;
@@ -39,8 +41,17 @@ public class ManagerTest {
     }
 
     @Test
+    public void canNotRaiseSalary() {
+        assertEquals(0, manager.raiseSalary(-33000), 0.0);
+    }
+    @Test
     public void canPayBonus() {
         assertEquals(320.0, manager.payBonus(), 0.0);
     }
 
+    @Test
+    public void canChangeName() {
+        manager.setName("Mark");
+        assertEquals("Mark", manager.getName());
+    }
 }

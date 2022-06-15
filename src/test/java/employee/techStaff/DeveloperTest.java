@@ -36,8 +36,18 @@ public class DeveloperTest {
     }
 
     @Test
+    public void canNotRaiseSalary() {
+        assertEquals(0, developer.raiseSalary(-33000), 0.0);
+    }
+    @Test
     public void canPayBonus() {
         assertEquals(320.0, developer.payBonus(), 0.0);
+    }
+
+    @Test
+    public void canChangeName() {
+        developer.setName("Mark");
+        assertEquals("Mark", developer.getName());
     }
 
 }
