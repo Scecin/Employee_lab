@@ -32,11 +32,10 @@ public abstract class Employee {
     }
 
     // Methods
-    public double raiseSalary(double moneyIncrement) {
+    public void raiseSalary(double moneyIncrement) {
         if (this.salary + moneyIncrement >= 0) {
             this.salary += moneyIncrement;
         } else this.salary = 0;
-        return this.salary;
     }
 
     public double payBonus() {

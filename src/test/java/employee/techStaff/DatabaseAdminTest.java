@@ -34,12 +34,14 @@ public class DatabaseAdminTest {
 
     @Test
     public void canRaiseSalary() {
-        assertEquals(32580.98, databaseAdmin.raiseSalary(580.98), 0.0);
+        databaseAdmin.raiseSalary(580.98);
+        assertEquals(32580.98, databaseAdmin.getSalary(), 0.0);
     }
 
     @Test
     public void canNotRaiseSalary() {
-        assertEquals(0, databaseAdmin.raiseSalary(-33000), 0.0);
+        databaseAdmin.raiseSalary(-33000);
+        assertEquals(0, databaseAdmin.getSalary(), 0.0);
     }
 
     @Test
